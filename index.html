@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>EduManage</h2>
+
+        <nav>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#students">Students</a>
+            <a href="#attendance">Attendance</a>
+            <a href="#results">Results</a>
+        </nav>
+
+        <p class="sidebar-footer">Student Management</p>
+    </div>
+
+    <main class="main-content">
+
+        <header>
+            <div>
+                <h1>Dashboard</h1>
+                <p>Welcome to your Student Management System</p>
+            </div>
+            <button id="addStudentBtn">+ Add Student</button>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <h2 id="totalStudents">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Present Today</h3>
+                <h2 id="presentStudents">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Average Marks</h3>
+                <h2 id="averageMarks">0%</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Top Grades</h3>
+                <h2 id="topGrades">0</h2>
+            </div>
+        </section>
+
+        <section class="student-section" id="performance">
+    <div class="section-heading">
+        <div>
+            <h2>Performance Overview</h2>
+            <p>Visual analysis of student performance</p>
+        </div>
+    </div>
+
+    <div style="max-width: 650px; height: 300px; margin: auto;">
+        <canvas id="performanceChart"></canvas>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<section class="student-section" id="attendance">
+    <div class="section-heading">
+        <div>
+            <h2>Attendance Management</h2>
+            <p>Mark student attendance</p>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceTable"></tbody>
+        </table>
+    </div>
+</section>
+       
+        <section class="student-section" id="students">
+            <div class="section-heading">
+                <div>
+                    <h2>Student Records</h2>
+                    <p>Manage your student information</p>
+                </div>
+
+                <input type="text" id="searchInput"
+                    placeholder="Search students...">
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Marks</th>
+                            <th>Grade</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentTable">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+       <section class="student-section" id="results">
+    <div class="section-heading">
+        <div>
+            <h2>Results Management</h2>
+            <p>Student marks and academic grades</p>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Grade</th>
+                    <th>Performance</th>
+                </tr>
+            </thead>
+            <tbody id="resultsTable"></tbody>
+        </table>
+    </div>
+</section>
+        <footer>
+            © 2026 EduManage | Student Management System
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
